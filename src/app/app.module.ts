@@ -14,7 +14,6 @@ import {ExternalConfigurationService} from './external-configuration.service';
     BrowserModule,
     AppRoutingModule,
     AngularHalModule.forRoot()
-
   ],
   providers: [
     {provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService}
