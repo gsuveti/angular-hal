@@ -32,5 +32,28 @@ export class AppComponent {
         console.log(people);
       });
     });
+
+    const params = [
+      {
+        key: 'projection',
+        value: 'addressprojection'
+      }
+    ];
+    this.addressService.get(1, params).subscribe((address: Address) => {
+      console.log(address);
+    });
+
+    const name = 'Bradford';
+    const options = {
+      params: [
+        {
+          key: 'firstName',
+          value: name
+        }
+      ]
+    };
+    this.personService.search('findByFirstName', options).subscribe((people: Person[]) => {
+      console.log(people);
+    });
   }
 }
