@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {PersonService} from './person.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-hal';
+
+  constructor(private personService: PersonService) {
+    this.personService.getAll().subscribe(data => {
+      console.log(data);
+    });
+  }
 }
