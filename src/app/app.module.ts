@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AngularHalModule} from 'angular4-hal';
-import {ExternalConfigurationServiceService} from './external-configuration-service.service';
+import {ExternalConfigurationService} from './external-configuration.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import {ExternalConfigurationServiceService} from './external-configuration-serv
 
   ],
   providers: [
-    {provide: 'ExternalConfigurationService', useClass: ExternalConfigurationServiceService}
+    {provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService}
 
   ],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ExternalConfigurationServiceService implements ExternalConfigurationHandlerInterface {
+export class ExternalConfigurationService implements ExternalConfigurationHandlerInterface {
 
   constructor(private http: HttpClient) {
   }
