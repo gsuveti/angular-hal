@@ -1,0 +1,27 @@
+<div *ngIf="person">
+  <!--<form (ngSubmit)="onSubmit()" #newForm="ngForm">-->
+  <p>First name: {{person.firstName}}</p>
+  <p>Last name: {{person.lastName}}</p>
+  <!--<input [(ngModel)]="person.firstName" name="firstName">-->
+
+  <!--<button type="submit">Save</button>-->
+  <!--</form>-->
+
+  <div *ngIf="person.address">
+    <h3>ADDRESS</h3>
+    <form (ngSubmit)="onSubmit()">
+
+      <label>Street name: </label>
+      <input [(ngModel)]="person.address.streetName" name="streetName">
+
+      <button type="submit">Save</button>
+
+    </form>
+  </div>
+</div>
+
+<pre>
+  <code>
+    {{person|json}}
+  </code>
+</pre>
