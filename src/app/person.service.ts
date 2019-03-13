@@ -8,7 +8,7 @@ import {RestService} from 'angular4-hal';
 export class PersonService extends RestService<Person> {
 
   constructor(injector: Injector) {
-    super(Person, 'people', injector);
+    super(Person, 'ppl', injector);
   }
 
 

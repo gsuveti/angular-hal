@@ -1,0 +1,201 @@
+{
+  "title": "Route sheet",
+  "properties": {
+    "date": {
+      "title": "Date",
+      "readOnly": false,
+      "type": "string",
+      "format": "date-time"
+    },
+    "localDateTime": {
+      "title": "Local date time",
+      "readOnly": false,
+      "type": "string",
+      "format": "date-time"
+    },
+    "carMutable": {
+      "title": "Car mutable",
+      "readOnly": false,
+      "type": "string",
+      "format": "uri"
+    },
+    "description": {
+      "title": "Description",
+      "readOnly": false,
+      "type": "string"
+    },
+    "label": {
+      "title": "Label",
+      "readOnly": false,
+      "type": "string"
+    },
+    "carAuditId": {
+      "title": "Car audit id",
+      "readOnly": false,
+      "type": "object",
+      "$ref": "#/definitions/auditId"
+    },
+    "localTime": {
+      "title": "Local time",
+      "readOnly": false,
+      "type": "string",
+      "format": "date-time"
+    },
+    "carEmbedded": {
+      "title": "Car embedded",
+      "readOnly": false,
+      "type": "object",
+      "$ref": "#/definitions/car"
+    },
+    "driver": {
+      "title": "Driver",
+      "readOnly": false,
+      "type": "string",
+      "format": "uri"
+    },
+    "oldDate": {
+      "title": "Old date",
+      "readOnly": false,
+      "type": "string",
+      "format": "date-time"
+    },
+    "car": {
+      "title": "Car",
+      "readOnly": true,
+      "type": "object"
+    },
+    "localDate": {
+      "title": "Local date",
+      "readOnly": false,
+      "type": "string",
+      "format": "date-time"
+    },
+    "driverAudit": {
+      "title": "Driver audit",
+      "readOnly": false,
+      "type": "object",
+      "$ref": "#/definitions/driverAudit"
+    },
+    "driverLastModifiedAuditId": {
+      "title": "Driver last modified audit id",
+      "readOnly": false,
+      "type": "object",
+      "$ref": "#/definitions/lastModifiedAuditId"
+    }
+  },
+  "definitions": {
+    "auditId": {
+      "type": "object",
+      "properties": {
+        "rev": {
+          "title": "Rev",
+          "readOnly": false,
+          "type": "integer"
+        },
+        "id": {
+          "title": "Id",
+          "readOnly": false,
+          "type": "integer"
+        }
+      }
+    },
+    "lastModifiedAuditId": {
+      "type": "object",
+      "properties": {
+        "lastModifiedAt": {
+          "title": "Last modified at",
+          "readOnly": false,
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "title": "Id",
+          "readOnly": false,
+          "type": "integer"
+        }
+      }
+    },
+    "car": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "title": "Created at",
+          "readOnly": true,
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastModifiedAt": {
+          "title": "Last modified at",
+          "readOnly": true,
+          "type": "string",
+          "format": "date-time"
+        },
+        "createdBy": {
+          "title": "Created by",
+          "readOnly": true,
+          "type": "string"
+        },
+        "lastModifiedBy": {
+          "title": "Last modified by",
+          "readOnly": true,
+          "type": "string"
+        },
+        "plate": {
+          "title": "Plate",
+          "readOnly": false,
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "readOnly": false,
+          "type": "string"
+        }
+      }
+    },
+    "driverAudit": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "title": "Created at",
+          "readOnly": true,
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastModifiedAt": {
+          "title": "Last modified at",
+          "readOnly": true,
+          "type": "string",
+          "format": "date-time"
+        },
+        "createdBy": {
+          "title": "Created by",
+          "readOnly": true,
+          "type": "string"
+        },
+        "licenseCategory": {
+          "title": "License category",
+          "readOnly": false,
+          "type": "string"
+        },
+        "lastModifiedBy": {
+          "title": "Last modified by",
+          "readOnly": true,
+          "type": "string"
+        },
+        "compositeKey": {
+          "title": "Composite key",
+          "readOnly": true,
+          "type": "object"
+        },
+        "employee": {
+          "title": "Employee",
+          "readOnly": false,
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

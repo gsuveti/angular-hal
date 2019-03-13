@@ -24,10 +24,6 @@ export class PersonComponent implements OnInit {
   person: Person;
   newAddr: boolean;
 
-  isNullOrUndefined(value: any): boolean {
-    return value === null || value === undefined;
-  }
-
   ngOnInit() {
     this.personId = this.route.snapshot.paramMap.get('id');
     this.personService.get(this.personId).subscribe(
@@ -58,8 +54,5 @@ export class PersonComponent implements OnInit {
         }
       );
     }
-    // this.personService.update(this.person).subscribe(
-    //   res => console.log(res)
-    // );
   }
 }

@@ -4,7 +4,7 @@ import {PersonComponent} from './person/person.component';
 
 const routes: Routes = [
   {
-    path: ':id',
+    path: 'person/:id',
     component: PersonComponent
   }
 ];

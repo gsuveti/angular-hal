@@ -1,0 +1,80 @@
+{
+  "title": "Person",
+  "properties": {
+    "firstName": {
+      "title": "First name",
+      "readOnly": false,
+      "type": "string"
+    },
+    "lastName": {
+      "title": "Last name",
+      "readOnly": false,
+      "type": "string"
+    },
+    "workContact": {
+      "title": "Work contact",
+      "readOnly": false,
+      "type": "object",
+      "$ref": "#/definitions/contact"
+    },
+    "lifeEvents": {
+      "title": "Life events",
+      "readOnly": false,
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/lifeEvent"
+      }
+    },
+    "deleted": {
+      "title": "Deleted",
+      "readOnly": false,
+      "type": "boolean"
+    },
+    "address": {
+      "title": "Address",
+      "readOnly": false,
+      "type": "string",
+      "format": "uri"
+    },
+    "contact": {
+      "title": "Contact",
+      "readOnly": false,
+      "type": "object",
+      "$ref": "#/definitions/contact"
+    }
+  },
+  "definitions": {
+    "contact": {
+      "type": "object",
+      "properties": {
+        "phone": {
+          "title": "Phone",
+          "readOnly": false,
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "readOnly": false,
+          "type": "string"
+        }
+      }
+    },
+    "lifeEvent": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "title": "Year",
+          "readOnly": false,
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "readOnly": false,
+          "type": "string"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}
